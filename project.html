@@ -26,14 +26,14 @@
         <script>
             document.addEventListener("DOMContentLoaded", function () {
               let path = window.location.pathname;
-              if (path !== "/" && !path.endsWith(".html")) {
+              if (!path.endsWith(".html") && path !== "/") {
                 window.location.replace(path + ".html");
               }
               if (path.endsWith(".html")) {
                 history.replaceState(null, "", path.replace(".html", ""));
               }
             });
-          </script>  
+          </script> 
     </head>
 
 
