@@ -26,13 +26,9 @@
         <script>
             document.addEventListener("DOMContentLoaded", function () {
               let path = window.location.pathname;
-          
-              // Redirect to .html files if the user visits a clean URL
-              if (!path.endsWith(".html") && path !== "/") {
+              if (path !== "/" && !path.endsWith(".html")) {
                 window.location.replace(path + ".html");
               }
-          
-              // Hide .html in browser address bar
               if (path.endsWith(".html")) {
                 history.replaceState(null, "", path.replace(".html", ""));
               }
