@@ -23,17 +23,6 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/custom-style.css">
         
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              let path = window.location.pathname;
-              if (!path.endsWith(".html") && path !== "/") {
-                window.location.replace(path + ".html");
-              }
-              if (path.endsWith(".html")) {
-                history.replaceState(null, "", path.replace(".html", ""));
-              }
-            });
-          </script> 
     </head>
 
 
@@ -84,10 +73,10 @@
 
                     <div class="mainnav d-none d-lg-block">
                         <ul class="main_menu">
-                            <li class="menu-item"><a href="/index.html">Home</a></li>
-                            <li class="menu-item"><a href="/about.html">About Us</a></li>
-                            <li class="menu-item active"><a href="/project.html">Projects</a></li>                            
-                            <li class="menu-item"><a href="/contact.html">Contacts</a></li>
+                            <li class="menu-item"><a href="/">Home</a></li>
+                            <li class="menu-item"><a href="about">About Us</a></li>
+                            <li class="menu-item active"><a href="project">Projects</a></li>                            
+                            <li class="menu-item"><a href="contact">Contacts</a></li>
                             <!-- <li class="menu-item menu-item-has-children"><a href="#">Blog</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="blog">Blog</a></li>
