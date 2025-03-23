@@ -23,6 +23,21 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/custom-style.css">
         
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              let path = window.location.pathname;
+          
+              // Remove .html from URL
+              if (path.endsWith(".html")) {
+                history.replaceState(null, "", path.replace(".html", ""));
+              }
+          
+              // Remove index from URL
+              if (path.endsWith("/index")) {
+                history.replaceState(null, "", path.replace("/index", "/"));
+              }
+            });
+          </script>
     </head>
 
 
